@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "libQuangtruongColor": [
+        "dist/lib-quangtruong-color"
+      ],
+      "libQuangtruongColor/*": [
+        "dist/lib-quangtruong-color/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

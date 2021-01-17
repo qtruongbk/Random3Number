@@ -1,0 +1,35 @@
+<body>
+   <div class="card">
+      <div class="title">#1 > #2 > #3</div>
+      <div class="divValue">
+         <label class="labelInput">#1</label>
+         <input [(ngModel)]="numberValue.value1" class="inputValue">
+      </div>
+      <div class="divValue">
+         <label class="labelInput">#2</label>
+         <input [(ngModel)]="numberValue.value2" class="inputValue">
+      </div>
+      <div class="divValue">
+         <label class="labelInput">#3</label>
+         <input [(ngModel)]="numberValue.value3" class="inputValue">
+      </div>
+      <i class="far fa-question-circle" style="margin: 0 2px"></i>
+      <button (click)="getRandomNumberAsync(textArea)" class="btnGetRandom">Lấy số ngẫu nghiên</button>
+      <span (click)="showDialog()"><i class="far fa-question-circle info"></i></span>
+      <div>
+         <textarea #textArea [(ngModel)]="valueFail" rows="9"
+            class="textArea" [scrollTop]="textArea.scrollHeight">
+      </textarea>
+      </div>
+
+      <p-dialog [showHeader]="false" [(visible)]="display" [modal]="true"
+      [style]="{backgroundColor:'rgba(0, 255, 255, 0.85)',borderRadius:'12px'}">
+         <p class="notice">Lấy ngẫu nhiên 3 chữ số #1, #2, #3. <br><br>
+         Nếu sai điều kiện #1 > #2 > #3 thì ghi lại vào bảng dưới.
+         </p>
+         <div><span (click)="display=false"><i class="fas fa-times-circle" style="font-size: 26px;"></i></span></div>
+      </p-dialog>
+   </div>
+</body>
+
+

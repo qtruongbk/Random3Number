@@ -28,9 +28,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+              "node_modules/primeng/resources/primeng.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/@fortawesome/fontawesome-free/js/all.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -116,6 +120,76 @@
             "production": {
               "devServerTarget": "QuangTruongTest:serve:production"
             }
+          }
+        }
+      }
+    },
+    "libQuangTruongColor": {
+      "projectType": "library",
+      "root": "projects/lib-quang-truong-color",
+      "sourceRoot": "projects/lib-quang-truong-color/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/lib-quang-truong-color/tsconfig.lib.json",
+            "project": "projects/lib-quang-truong-color/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/lib-quang-truong-color/src/test.ts",
+            "tsConfig": "projects/lib-quang-truong-color/tsconfig.spec.json",
+            "karmaConfig": "projects/lib-quang-truong-color/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/lib-quang-truong-color/tsconfig.lib.json",
+              "projects/lib-quang-truong-color/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "libQuangtruongColor": {
+      "projectType": "library",
+      "root": "projects/lib-quangtruong-color",
+      "sourceRoot": "projects/lib-quangtruong-color/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/lib-quangtruong-color/tsconfig.lib.json",
+            "project": "projects/lib-quangtruong-color/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/lib-quangtruong-color/src/test.ts",
+            "tsConfig": "projects/lib-quangtruong-color/tsconfig.spec.json",
+            "karmaConfig": "projects/lib-quangtruong-color/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/lib-quangtruong-color/tsconfig.lib.json",
+              "projects/lib-quangtruong-color/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       }

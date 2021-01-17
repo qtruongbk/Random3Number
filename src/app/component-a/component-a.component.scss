@@ -1,0 +1,244 @@
+.newCursor {
+  cursor: url("../../assets/newCur"), auto;
+}
+.textCursor {
+  cursor: url("../../assets/texthold.cur"), auto;
+}
+@media screen and (max-width: 640px) {
+  .card {
+    width: 88vw;
+    height: 80vh;
+    padding: 10px;
+  }
+  .divValue {
+    padding-top: 20px;
+  }
+  .inputValue {
+    padding: 5px 5px 5px 13px;
+    font-size: 15px;
+  }
+  .labelInput {
+    padding-right: 8px;
+  }
+  .btnGetRandom {
+    margin: 20px;
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+  .textArea {
+    width: 80vw;
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 640px) and (max-width: 768px) {
+  .card {
+    width: 88vw;
+    height: 80vh;
+    padding: 10px;
+  }
+  .divValue {
+    padding-top: 20px;
+  }
+  .inputValue {
+    padding: 5px 5px 5px 13px;
+    font-size: 15px;
+  }
+  .labelInput {
+    padding-right: 8px;
+  }
+  .btnGetRandom {
+    margin: 20px;
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+  .textArea {
+    width: 80vw;
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    width: 50vw;
+    height: 53vh;
+    padding: 10px;
+    min-height:600px;
+  }
+  .divValue {
+    padding-top: 20px;
+  }
+  .inputValue {
+    padding: 8px 8px 8px 15px;
+    width: 60%;
+    font-size: 24px;
+  }
+  .labelInput {
+    padding-right: 8px;
+    font-size: 24px;
+  }
+  .btnGetRandom {
+    margin: 25px;
+    padding: 15px 18px;
+    font-size: 24px;
+  }
+  .textArea {
+    width: 40vw;
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .card {
+    width: 22%;
+    height: 70%;
+    padding: 10px;
+  }
+  .divValue {
+    padding-top: 18px;
+  }
+  .inputValue {
+    padding: 4px 4px 4px 12px;
+    font-size: 15px;
+    width:60%;
+  }
+  .labelInput {
+    padding-right: 8px;
+    font-size: 15px;
+  }
+  .btnGetRandom {
+    margin: 15px;
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+  .textArea {
+    width: 18vw;
+    font-size: 15px;
+  }
+}
+
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  width:100%;
+  height:100%;
+  @extend .newCursor;
+}
+.inputValue {
+  font-weight: 600;
+  border-radius: 20px;
+  outline: none;
+  border-color: aqua;
+  color: aqua;
+  background-color: black;
+}
+.inputValue:hover {
+  @extend .textCursor;
+}
+.labelInput {
+  color: aqua;
+  font-weight: 400;
+  font-size: 18px;
+}
+.title {
+  color: black;
+  font-size: large;
+  font-weight: 800;
+  font-size: 40px;
+  text-shadow: 1px 1px 20px aqua;
+}
+.card {
+  border: 1px solid rgb(37, 255, 255);
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0px 0px 14px rgb(37, 255, 255);
+}
+@keyframes FailResult {
+  0% {
+    background-color: black;
+  }
+  50% {
+    background-color: red;
+  }
+  100% {
+    background-color: black;
+  }
+}
+.textArea {
+  text-align: center;
+  background-color: black;
+  color: aqua;
+  border-radius: 10px;
+  border: 1px solid aqua;
+  outline: 0;
+  background-color: none;
+  resize: none;
+}
+.textArea:hover {
+  @extend .textCursor;
+}
+.animationFail {
+  animation: FailResult 0.2s ease;
+}
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px aqua;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 255, 255, 0.2);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 255, 255, 0.6);
+}
+
+.btnGetRandom {
+  background-color: rgba(0, 255, 255, 0.2);
+  color: aqua;
+  border: 1px solid aqua;
+  border-radius: 8px;
+  outline: none;
+  font-weight: 600;
+}
+.btnGetRandom:hover {
+  background-color: rgba(0, 255, 255, 0.8);
+  color: black;
+  border-radius: 8px;
+  outline: none;
+  @extend .newCursor;
+}
+
+.btnGetRandom:active {
+  background-color: rgba(0, 255, 255, 0.2);
+  color: aqua;
+  border: 1px solid aqua;
+  border-radius: 8px;
+  outline: none;
+  font-weight: 600;
+  @extend .newCursor;
+}
+.notice {
+  color: rgb(102, 0, 51);
+  font-size: 24px;
+  font-weight: 600;
+}
+.info {
+  color: aqua;
+  padding: 0 2px;
+}
